@@ -10,10 +10,10 @@ client = InferenceClient("HuggingFaceH4/zephyr-7b-beta")
 def respond(
     message,
     history: list[tuple[str, str]],
-    system_message,
-    max_tokens,
-    temperature,
-    top_p,
+    system_message="You are a friendly Chatbot.",
+    max_tokens=512,
+    temperaturee=0.7,
+    top_p=0.95,
 ):
     messages = [{"role": "system", "content": system_message}]
 
