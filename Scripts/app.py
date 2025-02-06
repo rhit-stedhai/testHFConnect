@@ -24,8 +24,6 @@ def respond(
             messages.append({"role": "assistant", "content": val[1]})
 
     messages.append({"role": "user", "content": message})
-    print("messages: ", messages)
-    print()
 
     response = ""
 
@@ -39,10 +37,6 @@ def respond(
         token = message.choices[0].delta.content
 
         response += token
-        # print("message: ", message)
-        # print("response: ", response)
-        print("history: ", history)
-        print()
         yield response
 
 
