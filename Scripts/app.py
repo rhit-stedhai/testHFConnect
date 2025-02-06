@@ -24,6 +24,8 @@ def respond(
             messages.append({"role": "assistant", "content": val[1]})
 
     messages.append({"role": "user", "content": message})
+    print("messages: ", messages)
+    print()
 
     response = ""
 
@@ -39,7 +41,8 @@ def respond(
         response += token
         # print("message: ", message)
         # print("response: ", response)
-        # print()
+        print("history: ", history)
+        print()
         yield response
 
 
