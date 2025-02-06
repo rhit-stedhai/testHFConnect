@@ -37,9 +37,9 @@ def respond(
         token = message.choices[0].delta.content
 
         response += token
-        print("message: ", message)
-        print("response: ", response)
-        print()
+        # print("message: ", message)
+        # print("response: ", response)
+        # print()
         yield response
 
 
