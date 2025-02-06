@@ -12,7 +12,7 @@ def respond(
     history: list[tuple[str, str]],
     system_message="You are a friendly Chatbot.",
     max_tokens=512,
-    temperaturee=0.7,
+    temperature=0.7,
     top_p=0.95,
 ):
     messages = [{"role": "system", "content": system_message}]
