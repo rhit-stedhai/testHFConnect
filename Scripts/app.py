@@ -27,6 +27,8 @@ def respond(
 
     response = ""
 
+    print("client thing: ", client.chat_completion)
+
     for message in client.chat_completion(
         messages,
         max_tokens=max_tokens,
