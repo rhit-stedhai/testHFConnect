@@ -26,9 +26,7 @@ def respond(
     messages.append({"role": "user", "content": message})
 
     response = ""
-
-    print("client thing: ", client.chat_completion)
-
+    
     for message in client.chat_completion(
         messages,
         max_tokens=max_tokens,
@@ -43,11 +41,15 @@ def respond(
         yield response
 
 
+on_load = """
+async()=>{
+    console.log("HELLO");
+}
 """
-For information on how to customize the ChatInterface, peruse the gradio docs: https://www.gradio.app/docs/chatinterface
-"""
+
 demo = gr.ChatInterface(
     respond,
+    js = on_load,
     # additional_inputs=[
     #     gr.Textbox(value="You are a friendly Chatbot.", label="System message"),
     #     gr.Slider(minimum=1, maximum=2048, value=512, step=1, label="Max new tokens"),
