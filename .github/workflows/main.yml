@@ -14,7 +14,8 @@ jobs:
         with:
           fetch-depth: 0
           lfs: true
+          publish_dir: ./hugging_face_space
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://IanStedham:$HF_TOKEN@huggingface.co/spaces/IanStedham/testGitConnect main hugging_face_space/.
+        run: git push https://IanStedham:$HF_TOKEN@huggingface.co/spaces/IanStedham/testGitConnect main
