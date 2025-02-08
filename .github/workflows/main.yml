@@ -3,7 +3,7 @@ on:
   push:
     branches: [main]
     paths: 
-      - 'hugging_face_space'
+      - 'hugging_face_space/**'
   workflow_dispatch:
 
 jobs:
