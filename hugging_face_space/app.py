@@ -12,7 +12,7 @@ client = InferenceClient("HuggingFaceH4/zephyr-7b-beta")
 def respond(
     message,
     history: list[tuple[str, str]],
-    system_message="Please do not speak in bullet point format, only speak in paragraph form.",
+    system_message="Please do not speak in bullet point format, please only speak in paragraph form.",
     max_tokens=512,
     temperature=0.7,
     top_p=0.95,
