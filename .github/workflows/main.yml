@@ -3,10 +3,7 @@ on:
   push:
     branches: [main]
     paths: 
-      - 'hugging_face_space\app.py'
-      - 'hugging_face_space\gitattributes'
-      - 'hugging_face_space\README.md'
-      - 'hugging_face_space\requirements.txt'
+      - 'hugging_face_space'
   workflow_dispatch:
 
 jobs:
